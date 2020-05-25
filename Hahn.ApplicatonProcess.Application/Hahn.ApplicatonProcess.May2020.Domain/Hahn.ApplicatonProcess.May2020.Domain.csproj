@@ -9,4 +9,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hahn.ApplicatonProcess.May2020.Domain.Interfaces\Hahn.ApplicatonProcess.May2020.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
