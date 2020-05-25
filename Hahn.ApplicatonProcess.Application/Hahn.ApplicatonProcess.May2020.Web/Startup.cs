@@ -1,3 +1,5 @@
+using Hahn.ApplicatonProcess.May2020.Domain;
+using Hahn.ApplicatonProcess.May2020.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -19,6 +21,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureSwagger()
+                .ConfigureSwaggerExamples();
+
             services.AddControllersWithViews();
             // In production, the Aurelia files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -56,6 +61,12 @@ namespace Hahn.ApplicatonProcess.May2020.Web
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
+
+            app.UseSwagger()
+                .UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                });
 
             app.UseSpa(spa =>
             {
