@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicatonProcess.May2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicatonProcess.May2020.Domain", "Hahn.ApplicatonProcess.May2020.Domain\Hahn.ApplicatonProcess.May2020.Domain.csproj", "{1631351A-09DA-412B-A492-70FFBE3C7EDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hahn.ApplicatonProcess.May2020.Infrastructure", "Hahn.ApplicatonProcess.May2020.Infrastructure\Hahn.ApplicatonProcess.May2020.Infrastructure.csproj", "{0D2C95DE-5006-45BB-B905-A5AF1717DFEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicatonProcess.May2020.Infrastructure", "Hahn.ApplicatonProcess.May2020.Infrastructure\Hahn.ApplicatonProcess.May2020.Infrastructure.csproj", "{0D2C95DE-5006-45BB-B905-A5AF1717DFEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hahn.ApplicatonProcess.May2020.Data.Interfaces", "Hahn.ApplicatonProcess.May2020.Data.Interfaces\Hahn.ApplicatonProcess.May2020.Data.Interfaces.csproj", "{0ADC728E-732F-4487-A461-7E0FA5B5A50C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0D2C95DE-5006-45BB-B905-A5AF1717DFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D2C95DE-5006-45BB-B905-A5AF1717DFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D2C95DE-5006-45BB-B905-A5AF1717DFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ADC728E-732F-4487-A461-7E0FA5B5A50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADC728E-732F-4487-A461-7E0FA5B5A50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ADC728E-732F-4487-A461-7E0FA5B5A50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ADC728E-732F-4487-A461-7E0FA5B5A50C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
