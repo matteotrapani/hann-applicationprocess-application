@@ -1,4 +1,4 @@
-﻿using Hahn.ApplicatonProcess.May2020.Domain.Models;
+﻿using Hahn.ApplicatonProcess.May2020.Infrastructure.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Filters;
 

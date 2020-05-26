@@ -9,8 +9,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Hahn.ApplicatonProcess.May2020.Data.Interfaces\Hahn.ApplicatonProcess.May2020.Data.Interfaces.csproj" />
-  </ItemGroup>
-
 </Project>

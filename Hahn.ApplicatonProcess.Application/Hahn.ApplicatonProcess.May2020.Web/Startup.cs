@@ -1,6 +1,7 @@
 using Hahn.ApplicatonProcess.May2020.Data.Infrastructure;
 using Hahn.ApplicatonProcess.May2020.Domain;
 using Hahn.ApplicatonProcess.May2020.Infrastructure;
+using Hahn.ApplicatonProcess.May2020.Web.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +29,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web
                 .ConfigureSwaggerExamples()
                 .ConfigureApplicantContext()
                 .ConfigureLogging(Configuration)
-                .ConfigureSerilog(Configuration);
+                .ConfigureSerilog(Configuration)
+                .ConfigureAutomapper()
+                .ConfigureBusinessServices();
 
             services.AddControllersWithViews();
             // In production, the Aurelia files will be served from this directory

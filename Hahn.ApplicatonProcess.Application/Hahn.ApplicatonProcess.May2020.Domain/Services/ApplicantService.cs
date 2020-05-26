@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Hahn.ApplicatonProcess.May2020.Data;
-using Hahn.ApplicatonProcess.May2020.Domain.Models;
 using Hahn.ApplicatonProcess.May2020.Infrastructure.Exceptions;
+using Hahn.ApplicatonProcess.May2020.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Applicant = Hahn.ApplicatonProcess.May2020.Data.Entities.Applicant;
 
 namespace Hahn.ApplicatonProcess.May2020.Domain.Services
 {
@@ -26,34 +25,34 @@ namespace Hahn.ApplicatonProcess.May2020.Domain.Services
             _logger.LogInformation("############# APPLICANT SERVICE ##########3");
         }
 
-        private async Task<Data.Entities.IApplicant> GetEntityById(int id)
+        private async Task<Data.Entities.Applicant> GetEntityById(int id)
         {
             if (id <= 0)
-                throw new ArgumentException(nameof(id));
+                throw new ArgumentOutOfRangeException(nameof(id));
             var entity = await _context.Applicants.FirstOrDefaultAsync(a => a.Id == id);
             if (entity == null)
                 throw new NotFoundException(typeof(Applicant), id);
             return entity;
         }
 
-        public async Task<IList<IApplicant>> Get()
+        public async Task<IList<Applicant>> Get()
         {
             var entities = await _context.Applicants.ToListAsync();
-            return _mapper.Map<IList<IApplicant>>(entities);
+            return _mapper.Map<IList<Applicant>>(entities);
         }
 
-        public async Task<IApplicant> Get(int id)
+        public async Task<Applicant> Get(int id)
         {
             var entity = await GetEntityById(id);
 
-            return _mapper.Map<IApplicant>(entity);
+            return _mapper.Map<Applicant>(entity);
         }
 
-        public async Task<IApplicant> Add(IApplicantPostRequest model)
+        public async Task<Applicant> Add(ApplicantPostRequest model)
         {
             if (model == null)
                 throw new ArgumentNullException(nameof(model));
-            var entityToAdd = _mapper.Map<Applicant>(model);
+            var entityToAdd = _mapper.Map<Data.Entities.Applicant>(model);
             await _context.AddAsync(entityToAdd);
             await _context.SaveChangesAsync();
             var result = await Get(entityToAdd.Id);
@@ -61,7 +60,7 @@ namespace Hahn.ApplicatonProcess.May2020.Domain.Services
             return result;
         }
 
-        public async Task Update(int id, IApplicant model)
+        public async Task Update(int id, Applicant model)
         {
             var entityToUpdate = await GetEntityById(id);
             entityToUpdate = _mapper.Map(model, entityToUpdate);

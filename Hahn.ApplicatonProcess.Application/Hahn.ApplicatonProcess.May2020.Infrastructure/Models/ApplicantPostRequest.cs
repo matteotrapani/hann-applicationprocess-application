@@ -1,4 +1,4 @@
-﻿namespace Hahn.ApplicatonProcess.May2020.Domain.Models
+﻿namespace Hahn.ApplicatonProcess.May2020.Infrastructure.Models
 {
     public class ApplicantPostRequest : IApplicantPostRequest
     {

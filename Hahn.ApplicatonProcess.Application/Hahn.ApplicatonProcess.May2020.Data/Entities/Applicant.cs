@@ -1,6 +1,6 @@
 ﻿namespace Hahn.ApplicatonProcess.May2020.Data.Entities
 {
-    public class Applicant : BaseEntity, IApplicant
+    public class Applicant : BaseEntity
     {
         public string Name { get; set; }
         public string FamilyName { get; set; }

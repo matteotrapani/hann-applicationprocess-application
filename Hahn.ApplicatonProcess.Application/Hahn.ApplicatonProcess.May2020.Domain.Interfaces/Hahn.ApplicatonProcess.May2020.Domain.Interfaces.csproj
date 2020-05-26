@@ -9,4 +9,8 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hahn.ApplicatonProcess.May2020.Infrastructure\Hahn.ApplicatonProcess.May2020.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Hahn.ApplicatonProcess.May2020.Domain.Models
+namespace Hahn.ApplicatonProcess.May2020.Infrastructure.Models
 {
     public interface IBaseModel
     {

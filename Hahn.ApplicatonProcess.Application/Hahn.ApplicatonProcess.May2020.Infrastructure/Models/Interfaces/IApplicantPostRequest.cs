@@ -1,6 +1,6 @@
-﻿namespace Hahn.ApplicatonProcess.May2020.Domain.Models
+﻿namespace Hahn.ApplicatonProcess.May2020.Infrastructure.Models
 {
-    public interface IApplicant : IBaseModel
+    public interface IApplicantPostRequest
     {
         public string Name { get; set; }
         public string FamilyName { get; set; }
@@ -9,6 +9,5 @@
         public string EmailAddress { get; set; }
         public int Age { get; set; }
         public bool Hired { get; set; }
-
     }
 }

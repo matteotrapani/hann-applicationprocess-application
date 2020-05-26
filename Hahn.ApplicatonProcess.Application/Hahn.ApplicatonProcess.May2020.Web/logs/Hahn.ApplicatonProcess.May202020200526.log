@@ -95,3 +95,746 @@ System.IO.IOException: Authentication failed because the remote party has closed
 [10:00:42 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
 [10:00:42 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 236.7962 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
 [10:00:42 INF] Request finished in 251.4557ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:03:41 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:03:49 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:03:50 INF] HTTP GET /swagger/index.html responded 200 in 614.7978 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:03:50 INF] Request finished in 748.1362ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:03:51 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:03:52 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 388.6605 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:03:52 INF] Request finished in 417.3656ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:03:58 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:03:58 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:03:59 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:03:59 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 12.2481ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:03:59 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:03:59 ERR] HTTP GET /api/Applicant responded 500 in 159.4079 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+System.InvalidOperationException: Unable to resolve service for type 'Hahn.ApplicatonProcess.May2020.Domain.Services.IApplicantService' while attempting to activate 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:03:59 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+System.InvalidOperationException: Unable to resolve service for type 'Hahn.ApplicatonProcess.May2020.Domain.Services.IApplicantService' while attempting to activate 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:03:59 INF] Request finished in 563.0094ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:07:32 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:07:45 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:07:46 INF] HTTP GET /swagger/index.html responded 200 in 1420.2721 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:07:46 INF] Request finished in 1486.0868ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:07:47 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:07:48 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 318.2918 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:07:48 INF] Request finished in 329.7961ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:07:52 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:07:52 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:07:52 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:07:52 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 11.1763ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:07:52 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:07:52 ERR] HTTP GET /api/Applicant responded 500 in 185.9532 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+System.InvalidOperationException: Unable to resolve service for type 'Hahn.ApplicatonProcess.May2020.Domain.Services.IApplicantService' while attempting to activate 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:07:53 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+System.InvalidOperationException: Unable to resolve service for type 'Hahn.ApplicatonProcess.May2020.Domain.Services.IApplicantService' while attempting to activate 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:07:53 INF] Request finished in 488.6381ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:08:41 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:09:37 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:09:37 INF] HTTP GET /swagger/index.html responded 200 in 247.1481 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:09:37 INF] Request finished in 327.9687ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:09:41 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:09:41 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 323.0663 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:09:41 INF] Request finished in 335.7672ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:09:45 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:09:45 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:09:45 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:09:45 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 118.2407ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:09:45 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:09:45 ERR] HTTP GET /api/Applicant responded 500 in 262.4876 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:09:45 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:09:46 INF] Request finished in 766.2832ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:10:35 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:10:43 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:10:43 INF] HTTP GET /swagger/index.html responded 200 in 172.1802 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:10:43 INF] Request finished in 239.8035ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:10:45 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:10:45 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 334.0384 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:10:45 INF] Request finished in 348.6564ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:10:49 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:10:49 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:10:49 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:10:50 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:10:51 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 1772.343ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:10:51 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:10:51 ERR] HTTP GET /api/Applicant responded 500 in 1948.0566 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+System.ArgumentException: The specified type 'Hahn.ApplicatonProcess.May2020.Data.Entities.IApplicant'must be a non-interface reference type to be used as an entity type .
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityType..ctor(Type clrType, Model model, ConfigurationSource configurationSource)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model.AddEntityType(Type type, ConfigurationSource configurationSource)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.InternalModelBuilder.Entity(TypeIdentity& type, ConfigurationSource configurationSource, Nullable`1 shouldBeOwned)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.InternalModelBuilder.Entity(Type type, ConfigurationSource configurationSource, Nullable`1 shouldBeOwned)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.InternalModelBuilder.Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionModelBuilder.Entity(Type type, Nullable`1 shouldBeOwned, Boolean fromDataAnnotation)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.DbSetFindingConvention.ProcessModelInitialized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   at Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Collections.Generic.IAsyncEnumerable<TEntity>.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Get() in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 41
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get() in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 28
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:10:51 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+System.ArgumentException: The specified type 'Hahn.ApplicatonProcess.May2020.Data.Entities.IApplicant'must be a non-interface reference type to be used as an entity type .
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityType..ctor(Type clrType, Model model, ConfigurationSource configurationSource)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model.AddEntityType(Type type, ConfigurationSource configurationSource)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.InternalModelBuilder.Entity(TypeIdentity& type, ConfigurationSource configurationSource, Nullable`1 shouldBeOwned)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.InternalModelBuilder.Entity(Type type, ConfigurationSource configurationSource, Nullable`1 shouldBeOwned)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.InternalModelBuilder.Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionModelBuilder.Entity(Type type, Nullable`1 shouldBeOwned, Boolean fromDataAnnotation)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.DbSetFindingConvention.ProcessModelInitialized(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelInitialized(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model..ctor(ConventionSet conventions)
+   at Microsoft.EntityFrameworkCore.ModelBuilder..ctor(ConventionSet conventions)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_3(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Collections.Generic.IAsyncEnumerable<TEntity>.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Get() in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 41
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get() in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 28
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:10:52 INF] Request finished in 2585.4398ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:12:32 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:13:43 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:13:43 INF] HTTP GET /swagger/index.html responded 200 in 646.845 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:13:43 INF] Request finished in 744.3331ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:13:45 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:13:45 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 353.7684 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:13:45 INF] Request finished in 369.8772ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:13:53 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:13:53 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:13:53 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:13:54 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:13:55 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:13:55 INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant, Hahn.ApplicatonProcess.May2020.Domain.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:13:55 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 2611.8733ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:13:55 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:13:56 INF] HTTP GET /api/Applicant responded 200 in 2767.7591 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:13:56 INF] Request finished in 2808.7192ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:14:27 INF] Request starting HTTP/2 POST https://localhost:5001/api/Applicant application/json 130 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:14:27 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:14:27 INF] Route matched with {action = "Post", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant] Post(Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicantPostRequest) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:14:27 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:14:28 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web) in 182.2113ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:14:28 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:14:28 ERR] HTTP POST /api/Applicant responded 500 in 301.2719 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+System.NotSupportedException: Deserialization of interface types is not supported. Type 'Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicantPostRequest'
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeCreateObjectDelegateIsNull(Type invalidType)
+   at System.Text.Json.JsonSerializer.HandleStartObject(JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore(JsonSerializerOptions options, Utf8JsonReader& reader, ReadStack& readStack)
+   at System.Text.Json.JsonSerializer.ReadCore(JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& readStack)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:14:28 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+System.NotSupportedException: Deserialization of interface types is not supported. Type 'Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicantPostRequest'
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeCreateObjectDelegateIsNull(Type invalidType)
+   at System.Text.Json.JsonSerializer.HandleStartObject(JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore(JsonSerializerOptions options, Utf8JsonReader& reader, ReadStack& readStack)
+   at System.Text.Json.JsonSerializer.ReadCore(JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& readStack)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:14:28 INF] Request finished in 740.1721ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:15:24 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:16:16 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:16:16 INF] HTTP GET /swagger/index.html responded 200 in 186.7772 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:16:16 INF] Request finished in 268.3755ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:16:18 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:16:18 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 365.9694 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:16:18 INF] Request finished in 379.7541ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:16:22 INF] Request starting HTTP/2 POST https://localhost:5001/api/Applicant application/json 130 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:16:22 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:16:22 INF] Route matched with {action = "Post", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant] Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantPostRequest) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:16:23 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:16:23 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web) in 1165.5861ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:16:23 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:16:23 ERR] HTTP POST /api/Applicant responded 500 in 1354.3216 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ApplicantPostRequest -> Applicant
+Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantPostRequest -> Hahn.ApplicatonProcess.May2020.Data.Entities.Applicant
+   at lambda_method(Closure , ApplicantPostRequest , Applicant , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Add(IApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 56
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post(ApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 46
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:16:24 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ApplicantPostRequest -> Applicant
+Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantPostRequest -> Hahn.ApplicatonProcess.May2020.Data.Entities.Applicant
+   at lambda_method(Closure , ApplicantPostRequest , Applicant , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Add(IApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 56
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post(ApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 46
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:16:24 INF] Request finished in 1741.9999ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:19:34 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:19:41 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:19:41 INF] HTTP GET /swagger/index.html responded 200 in 234.1601 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:19:41 INF] Request finished in 298.1298ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:19:42 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:19:42 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 338.6838 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:19:42 INF] Request finished in 354.705ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:19:51 INF] Request starting HTTP/2 POST https://localhost:5001/api/Applicant application/json 130 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:19:51 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:19:51 INF] Route matched with {action = "Post", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant] Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantPostRequest) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:19:52 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:19:54 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:19:54 INF] Saved 1 entities to in-memory store. <Microsoft.EntityFrameworkCore.Update>
+[11:19:55 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web) in 4072.9079ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:19:55 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:19:55 ERR] HTTP POST /api/Applicant responded 500 in 4314.9982 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Applicant -> IApplicant
+Hahn.ApplicatonProcess.May2020.Data.Entities.Applicant -> Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant
+   at lambda_method(Closure , Applicant , IApplicant , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Get(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 49
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Add(IApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 59
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post(ApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 49
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:19:56 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Applicant -> IApplicant
+Hahn.ApplicatonProcess.May2020.Data.Entities.Applicant -> Hahn.ApplicatonProcess.May2020.Domain.Models.IApplicant
+   at lambda_method(Closure , Applicant , IApplicant , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Get(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 49
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Add(IApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 59
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post(ApplicantPostRequest model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 49
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:19:56 INF] Request finished in 4762.0217ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:28:40 INF] User profile is available. Using 'C:\Users\matte\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. <Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager>
+[11:28:59 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:28:59 INF] HTTP GET /swagger/index.html responded 200 in 394.2639 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:28:59 INF] Request finished in 488.2874ms 200 text/html;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:00 INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:00 INF] HTTP GET /swagger/v1/swagger.json responded 200 in 368.2703 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:00 INF] Request finished in 383.2064ms 200 application/json;charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:04 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:04 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:04 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:05 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:29:06 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:29:07 INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant, Hahn.ApplicatonProcess.May2020.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:29:07 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 2715.9647ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:07 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:07 INF] HTTP GET /api/Applicant responded 200 in 2909.9267 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:07 INF] Request finished in 2949.0706ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:13 INF] Request starting HTTP/2 POST https://localhost:5001/api/Applicant application/json 130 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:13 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:13 INF] Route matched with {action = "Post", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant] Post(Hahn.ApplicatonProcess.May2020.Infrastructure.Models.ApplicantPostRequest) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:13 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:29:13 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:29:13 INF] Saved 1 entities to in-memory store. <Microsoft.EntityFrameworkCore.Update>
+[11:29:13 INF] Executing ObjectResult, writing value of type 'Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:29:13 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web) in 904.537ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:13 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:13 INF] HTTP POST /api/Applicant responded 200 in 986.9618 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:14 INF] Request finished in 1003.9626ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:21 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:21 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:21 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:21 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:29:21 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:29:21 INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant, Hahn.ApplicatonProcess.May2020.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:29:21 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 54.2378ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:21 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:21 INF] HTTP GET /api/Applicant responded 200 in 93.3032 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:21 INF] Request finished in 112.6123ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:39 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant/1   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:39 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:39 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant] Get(Int32) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:39 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:29:39 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:29:39 INF] Executing ObjectResult, writing value of type 'Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:29:39 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 48.0305ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:39 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:39 INF] HTTP GET /api/Applicant/1 responded 200 in 116.9877 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:39 INF] Request finished in 141.9791ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:45 INF] Request starting HTTP/2 POST https://localhost:5001/api/Applicant application/json 130 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:45 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:45 INF] Route matched with {action = "Post", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant] Post(Hahn.ApplicatonProcess.May2020.Infrastructure.Models.ApplicantPostRequest) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:45 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:29:45 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:29:45 INF] Saved 1 entities to in-memory store. <Microsoft.EntityFrameworkCore.Update>
+[11:29:45 INF] Executing ObjectResult, writing value of type 'Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:29:45 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web) in 68.6842ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:45 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Post (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:45 INF] HTTP POST /api/Applicant responded 200 in 137.953 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:45 INF] Request finished in 160.6283ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:50 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant/2   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:29:50 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:50 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant] Get(Int32) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:51 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:29:51 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:29:51 INF] Executing ObjectResult, writing value of type 'Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:29:51 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 49.986ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:29:51 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:29:51 INF] HTTP GET /api/Applicant/2 responded 200 in 124.2518 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:29:51 INF] Request finished in 142.94ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:31 INF] Request starting HTTP/2 PUT https://localhost:5001/api/Applicant/2 application/json 143 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:31 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:31 INF] Route matched with {action = "Put", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task Put(Int32, Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:31 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:30:31 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:30:31 INF] Saved 1 entities to in-memory store. <Microsoft.EntityFrameworkCore.Update>
+[11:30:31 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put (Hahn.ApplicatonProcess.May2020.Web) in 110.4539ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:31 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:31 INF] HTTP PUT /api/Applicant/2 responded 200 in 202.5823 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:30:31 INF] Request finished in 218.2823ms 200  <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:39 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant/2   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:39 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:39 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant] Get(Int32) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:39 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:30:39 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:30:39 INF] Executing ObjectResult, writing value of type 'Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:30:39 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 46.9575ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:39 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:39 INF] HTTP GET /api/Applicant/2 responded 200 in 109.5402 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:30:39 INF] Request finished in 128.1575ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:47 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:47 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:47 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:47 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:30:47 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:30:47 INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant, Hahn.ApplicatonProcess.May2020.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:30:47 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 52.0196ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:47 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:47 INF] HTTP GET /api/Applicant responded 200 in 119.9685 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:30:47 INF] Request finished in 145.8291ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:59 INF] Request starting HTTP/2 DELETE https://localhost:5001/api/Applicant/2   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:30:59 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Delete (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:59 INF] Route matched with {action = "Delete", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task Delete(Int32) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:59 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:30:59 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:30:59 INF] Saved 1 entities to in-memory store. <Microsoft.EntityFrameworkCore.Update>
+[11:30:59 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Delete (Hahn.ApplicatonProcess.May2020.Web) in 72.7754ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:30:59 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Delete (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:30:59 INF] HTTP DELETE /api/Applicant/2 responded 200 in 148.9889 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:30:59 INF] Request finished in 170.883ms 200  <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:31:06 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:31:06 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:31:06 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IList`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant]] Get() on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:31:06 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:31:06 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:31:06 INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant, Hahn.ApplicatonProcess.May2020.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. <Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor>
+[11:31:06 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 29.735ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:31:06 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:31:06 INF] HTTP GET /api/Applicant responded 200 in 72.1938 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+[11:31:06 INF] Request finished in 88.6457ms 200 application/json; charset=utf-8 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:31:12 INF] Request starting HTTP/2 GET https://localhost:5001/api/Applicant/2   <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:31:12 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:31:12 INF] Route matched with {action = "Get", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant] Get(Int32) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:31:12 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:31:12 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:31:12 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web) in 498.0303ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:31:12 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:31:12 ERR] HTTP GET /api/Applicant/2 responded 500 in 545.6832 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+Hahn.ApplicatonProcess.May2020.Infrastructure.Exceptions.NotFoundException: The element of type 'Applicant' with  'id=2' was not found
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.GetEntityById(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 35
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Get(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 46
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 39
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:31:12 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+Hahn.ApplicatonProcess.May2020.Infrastructure.Exceptions.NotFoundException: The element of type 'Applicant' with  'id=2' was not found
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.GetEntityById(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 35
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Get(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 46
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Get(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 39
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:31:13 INF] Request finished in 938.3518ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:31:22 INF] Request starting HTTP/2 PUT https://localhost:5001/api/Applicant/2 application/json 143 <Microsoft.AspNetCore.Hosting.Diagnostics>
+[11:31:22 INF] Executing endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:31:22 INF] Route matched with {action = "Put", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task Put(Int32, Hahn.ApplicatonProcess.May2020.Infrastructure.Models.Applicant) on controller Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController (Hahn.ApplicatonProcess.May2020.Web). <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:31:22 INF] ############# APPLICANT SERVICE ##########3 <Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService>
+[11:31:22 INF] Entity Framework Core 3.1.4 initialized 'ApplicantContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Applicants  <Microsoft.EntityFrameworkCore.Infrastructure>
+[11:31:23 INF] Executed action Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put (Hahn.ApplicatonProcess.May2020.Web) in 366.0878ms <Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker>
+[11:31:23 INF] Executed endpoint 'Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put (Hahn.ApplicatonProcess.May2020.Web)' <Microsoft.AspNetCore.Routing.EndpointMiddleware>
+[11:31:23 ERR] HTTP PUT /api/Applicant/2 responded 500 in 423.929 ms <Serilog.AspNetCore.RequestLoggingMiddleware>
+Hahn.ApplicatonProcess.May2020.Infrastructure.Exceptions.NotFoundException: The element of type 'Applicant' with  'id=2' was not found
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.GetEntityById(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 35
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Update(Int32 id, Applicant model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 65
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put(Int32 id, Applicant model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 60
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[11:31:23 ERR] An unhandled exception has occurred while executing the request. <Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware>
+Hahn.ApplicatonProcess.May2020.Infrastructure.Exceptions.NotFoundException: The element of type 'Applicant' with  'id=2' was not found
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.GetEntityById(Int32 id) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 35
+   at Hahn.ApplicatonProcess.May2020.Domain.Services.ApplicantService.Update(Int32 id, Applicant model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Services\ApplicantService.cs:line 65
+   at Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantController.Put(Int32 id, Applicant model) in D:\development\hann-applicationprocess-application.git\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Controllers\ApplicantController.cs:line 60
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[11:31:23 INF] Request finished in 631.004ms 500 text/plain <Microsoft.AspNetCore.Hosting.Diagnostics>

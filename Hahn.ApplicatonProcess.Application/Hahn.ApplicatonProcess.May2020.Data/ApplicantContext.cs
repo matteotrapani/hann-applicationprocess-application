@@ -7,6 +7,6 @@ namespace Hahn.ApplicatonProcess.May2020.Data
     {
         public ApplicantContext(DbContextOptions<ApplicantContext> options) : base(options) {}
 
-        public DbSet<IApplicant> Applicants { get; set; }
+        public DbSet<Applicant> Applicants { get; set; }
     }
 }

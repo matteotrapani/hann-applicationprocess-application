@@ -2,7 +2,7 @@
 
 namespace Hahn.ApplicatonProcess.May2020.Data.Entities
 {
-    public abstract class AuditableEntity : IAuditableEntity
+    public abstract class AuditableEntity
     {
         public string CreatedBy { get; set; }
         public DateTime Created { get; set; }
