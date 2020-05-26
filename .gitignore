@@ -57,3 +57,4 @@ test/cypress/integration/examples
 screenshots
 
 *.code-workspace
+Hahn.ApplicatonProcess.Application/Hahn.ApplicatonProcess.May2020.Web/logs
