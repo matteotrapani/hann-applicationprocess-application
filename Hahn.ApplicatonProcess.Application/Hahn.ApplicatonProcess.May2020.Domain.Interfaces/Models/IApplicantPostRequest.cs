@@ -1,6 +1,6 @@
-﻿namespace Hahn.ApplicatonProcess.May2020.Data.Entities
+﻿namespace Hahn.ApplicatonProcess.May2020.Domain.Models
 {
-    public interface IApplicant : IBaseEntity
+    public interface IApplicantPostRequest
     {
         public string Name { get; set; }
         public string FamilyName { get; set; }
