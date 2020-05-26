@@ -31,9 +31,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web
                 .ConfigureLogging(Configuration)
                 .ConfigureSerilog(Configuration)
                 .ConfigureAutomapper()
-                .ConfigureBusinessServices();
+                .ConfigureBusinessServices()
+                .ConfigureMvc();
 
-            services.AddControllersWithViews();
             // In production, the Aurelia files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
