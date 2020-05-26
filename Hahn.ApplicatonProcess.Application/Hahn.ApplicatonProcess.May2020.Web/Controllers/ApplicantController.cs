@@ -42,11 +42,13 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Controllers
         // POST api/<ApplicantController>
         [HttpPost]
         [Produces("application/json")]
-        public async Task<Applicant> Post(ApplicantPostRequest model)
+        public async Task<string> Post(ApplicantPostRequest model)
         {
             if (model == null)
                 throw new ArgumentNullException(nameof(model));
-            return await _service.Add(model);
+            var result = await _service.Add(model);
+            var objectUrl = this.Url.Action(nameof(Get), new {id = result.Id});
+            return objectUrl;
         }
 
         // PUT api/<ApplicantController>/5
