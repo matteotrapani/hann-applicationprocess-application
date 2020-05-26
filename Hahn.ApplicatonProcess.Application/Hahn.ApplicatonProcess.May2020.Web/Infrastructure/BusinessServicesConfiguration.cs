@@ -7,7 +7,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Infrastructure
     {
         public static IServiceCollection ConfigureBusinessServices(this IServiceCollection services)
         {
-            return services.AddTransient<IApplicantService, ApplicantService>();
+            return services
+                .AddTransient<IApplicantService, ApplicantService>()
+                ;
         }
     }
 }

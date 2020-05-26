@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using FluentValidation.AspNetCore;
 
 namespace Hahn.ApplicatonProcess.May2020.Web
 {
@@ -32,7 +33,11 @@ namespace Hahn.ApplicatonProcess.May2020.Web
                 .ConfigureSerilog(Configuration)
                 .ConfigureAutomapper()
                 .ConfigureBusinessServices()
-                .ConfigureMvc();
+                .ConfigureMvc()
+                .ConfigureFluentValidation()
+                ;
+
+            services.ConfigureCountriesApiHttpClient(Configuration.GetSection("CountriesApi"));
 
             // In production, the Aurelia files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

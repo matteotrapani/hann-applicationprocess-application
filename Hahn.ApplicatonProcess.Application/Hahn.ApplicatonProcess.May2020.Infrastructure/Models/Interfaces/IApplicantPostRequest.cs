@@ -8,6 +8,6 @@
         public string CountryOfOrigin { get; set; }
         public string EmailAddress { get; set; }
         public int Age { get; set; }
-        public bool Hired { get; set; }
+        public bool? Hired { get; set; }
     }
 }

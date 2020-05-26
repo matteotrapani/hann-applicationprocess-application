@@ -29,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Hahn.ApplicatonProcess.May2020.Data\Hahn.ApplicatonProcess.May2020.Data.csproj" />
     <ProjectReference Include="..\Hahn.ApplicatonProcess.May2020.Domain\Hahn.ApplicatonProcess.May2020.Domain.csproj" />
+    <ProjectReference Include="..\Hahn.ApplicatonProcess.May2020.Infrastructure\Hahn.ApplicatonProcess.May2020.Infrastructure.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
