@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace Hahn.ApplicatonProcess.May2020.Web
 {
@@ -24,7 +26,9 @@ namespace Hahn.ApplicatonProcess.May2020.Web
         {
             services.ConfigureSwagger()
                 .ConfigureSwaggerExamples()
-                .ConfigureApplicantContext();
+                .ConfigureApplicantContext()
+                .ConfigureLogging(Configuration)
+                .ConfigureSerilog(Configuration);
 
             services.AddControllersWithViews();
             // In production, the Aurelia files will be served from this directory
@@ -35,7 +39,7 @@ namespace Hahn.ApplicatonProcess.May2020.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -48,12 +52,20 @@ namespace Hahn.ApplicatonProcess.May2020.Web
                 app.UseHsts();
             }
 
+            var logger =
+                new LoggerConfiguration()
+                    .ReadFrom.Configuration(Configuration, "Serilog")
+                    .CreateLogger();
+            loggerFactory.AddSerilog(logger);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
             }
+            app.UseSerilogRequestLogging();
+
 
             app.UseRouting();
 
