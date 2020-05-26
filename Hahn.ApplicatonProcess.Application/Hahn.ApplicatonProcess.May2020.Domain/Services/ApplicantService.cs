@@ -21,8 +21,6 @@ namespace Hahn.ApplicatonProcess.May2020.Domain.Services
             _context = context;
             _mapper = mapper;
             _logger = logger;
-
-            _logger.LogInformation("############# APPLICANT SERVICE ##########3");
         }
 
         private async Task<Data.Entities.Applicant> GetEntityById(int id)
