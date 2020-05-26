@@ -8,7 +8,10 @@ namespace Hahn.ApplicatonProcess.May2020.Web.Infrastructure
     {
         public static IMvcBuilder ConfigureMvc(this IServiceCollection services)
         {
-            return services.AddControllersWithViews(options => options.Filters.Add<ApiExceptionFilterAttribute>());
+
+          // Add framework services.
+          return services.AddMvc(options => options.Filters.Add<ApiExceptionFilterAttribute>());
+            // .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
     }
 }
