@@ -18,7 +18,8 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "resolveJsonModule": true,
-    "allowJs": true
+    "allowJs": true,
+    "types": [ "i18next", "i18next-xhr-backend" ]
   },
   "include": [
     "./src/**/*.ts",

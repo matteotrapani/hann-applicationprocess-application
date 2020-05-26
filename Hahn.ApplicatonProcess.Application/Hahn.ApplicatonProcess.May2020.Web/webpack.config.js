@@ -30,6 +30,15 @@ const cssRules = [
 ];
 
 
+const coreBundles = {
+  // these will be included in the 'aurelia' bundle (except for the above bootstrap packages)
+  aurelia: [
+    'aurelia-form-renderer-bootstrap',
+    'aurelia-i18n'
+  ]
+};
+
+
 module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, host } = {}) => ({
   resolve: {
     extensions: ['.ts', '.js'],
@@ -51,7 +60,8 @@ module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, h
       // Uncomment next line if you need to support IE11
       // 'promise-polyfill/src/polyfill',
       'aurelia-bootstrapper'
-    ]
+    ],
+    aurelia: coreBundles.aurelia
   },
   mode: production ? 'production' : 'development',
   output: {

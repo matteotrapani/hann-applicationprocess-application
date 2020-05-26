@@ -18,7 +18,12 @@
       "server": "dev",
       "extractCss": "prod",
       "coverage": false
-    }
+    },
+    "bundles": {
+      "dependencies": [
+        "aurelia-form-renderer-bootstrap"
+      ]
+  } 
   },
   "platform": {
     "hmr": false,
