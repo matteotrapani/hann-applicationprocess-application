@@ -1,1 +1,10 @@
-﻿
+﻿{
+    "applicants": {
+        "list": {
+            "title": "Applicants"
+        },
+        "name": "Name",
+        "familyName": "Family name",
+        "hired": "Hired"
+    }
+}

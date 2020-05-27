@@ -1,0 +1,10 @@
+﻿{
+    "applicants": {
+        "list": {
+            "title": "Candidati"
+        },
+        "name": "Nome",
+        "familyName": "Cognome",
+        "hired": "Assunto"
+    }
+}

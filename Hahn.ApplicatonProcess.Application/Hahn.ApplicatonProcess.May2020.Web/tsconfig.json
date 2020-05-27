@@ -19,7 +19,7 @@
     "baseUrl": "src",
     "resolveJsonModule": true,
     "allowJs": true,
-    "types": [ "i18next", "i18next-xhr-backend" ]
+    "types": [ "i18next" ]
   },
   "include": [
     "./src/**/*.ts",
