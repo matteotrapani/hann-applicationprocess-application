@@ -9,7 +9,7 @@ export class ApplicantsApi {
     }
 
     private jsonIntReplacer: (key: string, value: any) => number = (key, value) => {
-        return key === "age" ? +value : value;
+        return key === "age" || key === "id" ? +value : value;
     }
 
     public async getAll(): Promise<Applicant[]> {

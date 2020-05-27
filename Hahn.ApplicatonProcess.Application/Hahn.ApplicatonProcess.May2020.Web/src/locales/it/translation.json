@@ -6,6 +6,9 @@
         "add": {
             "title": "Aggiungi candidato"
         },
+        "edit": {
+            "title": "Modifica candidato"
+        },
         "name": "Nome",
         "familyName": "Cognome",
         "address": "Indirizzo",
@@ -27,6 +30,7 @@
         "cancel": "Annulla",
         "ok": "Ok",
         "resetConfirmation": "Sei sicuro di voler reinizializzare il form?",
+        "deleteConfirmation": "Sei sicuro di voler cancellare l'elemento selezionato?",
         "switchLanguage": {
             "button": "Cambia lingua",
             "info": "Ricarica la pagina per visualizzare il cambiamento di lingua"

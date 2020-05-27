@@ -20,12 +20,17 @@ export class ChildRouter {
         moduleId: PLATFORM.moduleName('./applicants-list'),
         nav: true,
         title: 'Applicants'
-      }
+      },
       {
         route: 'applicants/add',
         name: 'addApplicant',
         moduleId: PLATFORM.moduleName('./applicants-add'),
         nav: false,
+      },
+      {
+        route: 'applicants/:id', 
+        moduleId: PLATFORM.moduleName('./applicant-edit'), 
+        name:'editApplicant'
       }
     ]);
 

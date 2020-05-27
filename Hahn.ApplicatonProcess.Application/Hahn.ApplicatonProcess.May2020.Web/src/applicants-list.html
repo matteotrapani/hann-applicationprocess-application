@@ -18,6 +18,7 @@
                         <th scope="col" t="applicants.familyName"></th>
                         <th scope="col" t="applicants.hired"></th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +26,8 @@
                         <td>${applicant.name}</td>
                         <td>${applicant.familyName}</td>
                         <td><input class="form-check-input ml-0" type="checkbox" checked.bind="applicant.hired" disabled></td>
-                        <td><button type="button" class="btn btn-primary" click.trigger="select(applicant)"><i class="far fa-eye"></i></button></td>
+                        <td><a class="btn btn-primary" route-href="route: editApplicant; params.bind: {id:applicant.id}"><i class="fas fa-edit"></i></a></td>
+                        <td><button class="btn btn-danger" click.trigger="delete(applicant.id)"><i class="fas fa-trash-alt"></i></button></td>
                     </tr>
                 </tbody>
             </table>

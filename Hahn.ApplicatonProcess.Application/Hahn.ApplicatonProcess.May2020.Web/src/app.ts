@@ -33,6 +33,13 @@ export class App {
         moduleId: PLATFORM.moduleName('./applicants-add'),
         nav: false,
         title: this.i18n.tr('applicants.add.title')
+      },
+      {
+        route: 'applicants/:id', 
+        name:'editApplicant',
+        moduleId: PLATFORM.moduleName('./applicant-edit'), 
+        nav: false,
+        title: this.i18n.tr('applicants.edit.title')
       }
     ]);
 

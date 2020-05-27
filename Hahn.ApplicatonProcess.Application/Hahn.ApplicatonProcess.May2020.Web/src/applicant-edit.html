@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" disabled.bind="!isFormValid">${ 'general.save' | t }</button>
-                <button class="btn btn-danger" click.trigger="resetFields()" disabled.bind="areFieldsAllEmpty">${ 'general.reset' | t }</button>
+                <a class="btn btn-danger" route-href="route: applicants">${ 'general.cancel' | t }</a>
             </form>
         </div>
     </section>

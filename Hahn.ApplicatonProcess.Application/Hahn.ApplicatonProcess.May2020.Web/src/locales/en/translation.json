@@ -6,6 +6,9 @@
         "add": {
             "title": "Add applicant"
         },
+        "edit": {
+            "title": "Edit applicant"
+        },
         "name": "Name",
         "familyName": "Family name",
         "address": "Address",
@@ -27,6 +30,7 @@
         "cancel": "Cancel",
         "ok": "Ok",
         "resetConfirmation": "Are you sure you want to reset the form?",
+        "deleteConfirmation": "Are you sure you want to delete the element?",
         "switchLanguage": {
             "button": "Switch language",
             "info": "Refresh the page to see the language change"

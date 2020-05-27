@@ -2,16 +2,17 @@ import {autoinject, computedFrom} from 'aurelia-framework';
 import { I18N } from 'aurelia-i18n';
 import { ValidationController, ValidationRules, ValidateEvent, validateTrigger } from 'aurelia-validation';
 import { BootstrapFormRenderer } from 'utils/bootstrap-form-renderer';
-import { ApplicantPostRequest } from 'models/applicantPostRequest';
-import { ApplicantsApi, ApiException } from 'applicants.api';
+import { ApplicantsApi } from 'applicants.api';
 import {DialogService} from 'aurelia-dialog';
 import { ErrorDialog, ErrorDialogModel } from 'error-dialog';
 import {Router} from 'aurelia-router';
-import { ConfirmationDialog } from 'confirmation-dialog';
+import { Applicant } from 'models/applicant';
 
 @autoinject
-export class ApplicantsAdd {
+export class ApplicantEdit {
   public heading: string = '';
+
+  public id: number = 0;
 
   public name: string;
   public familyName: string;
@@ -20,7 +21,7 @@ export class ApplicantsAdd {
   public emailAddress: string;
   public age: number;
   public hired: boolean;
-  public isFormValid: boolean = false;
+  public isFormValid: boolean = true;
 
   constructor(
     private applicantsApi: ApplicantsApi, 
@@ -30,12 +31,12 @@ export class ApplicantsAdd {
     private router: Router
   ) {
     ValidationRules
-    .ensure((m: ApplicantsAdd) => m.name).displayName(this.i18n.tr('applicants.name')).required().minLength(5)
-    .ensure((m: ApplicantsAdd) => m.familyName).displayName(this.i18n.tr('applicants.familyName')).required().minLength(5)
-    .ensure((m: ApplicantsAdd) => m.address).displayName(this.i18n.tr('applicants.address')).required().minLength(10)
-    .ensure((m: ApplicantsAdd) => m.countryOfOrigin).displayName(this.i18n.tr('applicants.countryOfOrigin')).required().minLength(2)
-    .ensure((m: ApplicantsAdd) => m.emailAddress).displayName(this.i18n.tr('applicants.emailAddress')).required().email()
-    .ensure((m: ApplicantsAdd) => m.age).displayName(this.i18n.tr('applicants.age')).required().min(20).max(60)
+    .ensure((m: ApplicantEdit) => m.name).displayName(this.i18n.tr('applicants.name')).required().minLength(5)
+    .ensure((m: ApplicantEdit) => m.familyName).displayName(this.i18n.tr('applicants.familyName')).required().minLength(5)
+    .ensure((m: ApplicantEdit) => m.address).displayName(this.i18n.tr('applicants.address')).required().minLength(10)
+    .ensure((m: ApplicantEdit) => m.countryOfOrigin).displayName(this.i18n.tr('applicants.countryOfOrigin')).required().minLength(2)
+    .ensure((m: ApplicantEdit) => m.emailAddress).displayName(this.i18n.tr('applicants.emailAddress')).required().email()
+    .ensure((m: ApplicantEdit) => m.age).displayName(this.i18n.tr('applicants.age')).required().min(20).max(60)
     .on(this);
 
     const bootstrapFormRenderer = new BootstrapFormRenderer();
@@ -44,17 +45,27 @@ export class ApplicantsAdd {
     this.validationController.validate();
   }
 
-  async activate(): Promise<void> {
-    this.heading = this.i18n.tr('applicants.add.title');
+  async activate(params): Promise<void> {
+    this.heading = this.i18n.tr('applicants.edit.title') + ' ' + params.id;
+    this.id = params.id;
+    const applicant = await this.applicantsApi.getById(this.id);
+    this.name = applicant.name;
+    this.familyName = applicant.familyName;
+    this.address = applicant.address;
+    this.countryOfOrigin = applicant.countryOfOrigin;
+    this.emailAddress = applicant.emailAddress;
+    this.age = applicant.age;
+    this.hired = applicant.hired;
   }
 
   private checkFormIsValid(event: ValidateEvent): void {
-    this.isFormValid = event.type !== 'reset' && event.results.every(r => r.valid);
+    this.isFormValid = event.results.every(r => r.valid);
   }
 
   public async submit() {
     await this.validationController.validate();
-    var applicant = new ApplicantPostRequest();
+    var applicant = new Applicant();
+    applicant.id = this.id;
     applicant.name = this.name;
     applicant.familyName = this.familyName;
     applicant.address = this.address;
@@ -64,7 +75,7 @@ export class ApplicantsAdd {
     applicant.hired = this.hired;
 
     try {
-      await this.applicantsApi.post(applicant);
+      await this.applicantsApi.put(this.id, applicant);
       this.router.navigate('applicants')
     } catch(e) {
       const errors = [];
@@ -76,25 +87,5 @@ export class ApplicantsAdd {
       errorDialog.errors = errors;
       this.dialogService.open({ viewModel: ErrorDialog, model: errorDialog, lock: false });
     }
-  }
-  
-  @computedFrom('name', 'familyName', 'address', 'countryOfOrigin', 'emailAddress', 'age', 'hired')
-  get areFieldsAllEmpty(): boolean {
-    return !this.name && !this.familyName && !this.address && !this.countryOfOrigin && !this.emailAddress && !this.age && !this.hired;
-  }
-
-  public resetFields() {
-    this.dialogService.open({ viewModel: ConfirmationDialog, model: this.i18n.tr('general.resetConfirmation'), lock: false }).whenClosed(response => {
-      if (!response.wasCancelled) {
-        this.name = '';
-        this.familyName = '';
-        this.address = '';
-        this.countryOfOrigin = '';
-        this.emailAddress = '';
-        this.age = null;
-        this.hired = null;
-        this.validationController.reset();
-      }
-    });
   }
 }
