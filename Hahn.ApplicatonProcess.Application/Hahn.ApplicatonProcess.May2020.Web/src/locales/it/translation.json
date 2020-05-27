@@ -24,9 +24,13 @@
     "general": {
         "save": "Salva",
         "reset": "Reset",
+        "cancel": "Annulla",
+        "ok": "Ok",
+        "resetConfirmation": "Sei sicuro di voler reinizializzare il form?",
         "switchLanguage": {
             "button": "Cambia lingua",
             "info": "Ricarica la pagina per visualizzare il cambiamento di lingua"
-        }
+        },
+        "errorSave": "Errore durante il salvataggio"
     }
 }

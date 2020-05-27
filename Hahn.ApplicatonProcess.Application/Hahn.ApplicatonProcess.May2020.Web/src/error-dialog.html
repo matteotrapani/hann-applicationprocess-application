@@ -1,0 +1,13 @@
+<template>
+    <ux-dialog>
+        <ux-dialog-header>
+            ${title}
+        </ux-dialog-header>
+        <ux-dialog-body>
+            <p repeat.for="error of errors">${error}</p>
+        </ux-dialog-body>
+        <ux-dialog-footer>
+          <button click.trigger="dialogController.cancel()">${'general.cancel' | t}</button>
+        </ux-dialog-footer>
+      </ux-dialog>
+</template>

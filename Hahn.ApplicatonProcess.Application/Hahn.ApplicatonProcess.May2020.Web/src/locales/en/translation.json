@@ -24,9 +24,13 @@
     "general": {
         "save": "Save",
         "reset": "Reset",
+        "cancel": "Cancel",
+        "ok": "Ok",
+        "resetConfirmation": "Are you sure you want to reset the form?",
         "switchLanguage": {
             "button": "Switch language",
             "info": "Refresh the page to see the language change"
-        }
+        },
+        "errorSave": "Error occured while saving"
     }
 }

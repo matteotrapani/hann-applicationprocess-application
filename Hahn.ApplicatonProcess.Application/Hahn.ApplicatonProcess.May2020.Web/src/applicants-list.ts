@@ -1,6 +1,7 @@
 import {autoinject} from 'aurelia-framework';
-import { IApplicant, ApplicantsApi } from 'applicantsApi';
 import { I18N } from 'aurelia-i18n';
+import { ApplicantsApi } from 'applicants.api';
+import { IApplicant } from 'models/applicant';
 
 @autoinject
 export class ApplicantsList {

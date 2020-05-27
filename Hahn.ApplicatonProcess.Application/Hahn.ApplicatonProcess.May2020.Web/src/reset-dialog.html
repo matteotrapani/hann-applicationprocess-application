@@ -1,0 +1,11 @@
+<template>
+    <ux-dialog>
+        <ux-dialog-body>
+            ${'general.resetConfirmation' | t}
+        </ux-dialog-body>
+        <ux-dialog-footer>
+          <button click.trigger="dialogController.cancel()">${'general.cancel' | t}</button>
+          <button click.trigger="dialogController.ok()">${'general.ok' | t}</button>
+        </ux-dialog-footer>
+      </ux-dialog>
+</template>

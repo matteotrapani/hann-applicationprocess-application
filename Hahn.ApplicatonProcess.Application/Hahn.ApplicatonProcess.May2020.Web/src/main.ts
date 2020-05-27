@@ -19,6 +19,7 @@ export function configure(aurelia: Aurelia) {
 
   aurelia.use
     .plugin(PLATFORM.moduleName('aurelia-validation'))
+    .plugin(PLATFORM.moduleName('aurelia-dialog'))
     .plugin(PLATFORM.moduleName('aurelia-i18n'), (instance) => {
       let aliases = ['t', 'i18n'];
       // add aliases for 't' attribute
@@ -46,11 +47,6 @@ export function configure(aurelia: Aurelia) {
 
   //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
   // aurelia.use.plugin(PLATFORM.moduleName('aurelia-html-import-template-loader'));
-  
-  if (environment.debug) {
-    aurelia.use.developmentLogging();
-  }
-
   
   ValidationMessageProvider.prototype.getMessage = function(key) {
     const i18n = aurelia.container.get(I18N);
