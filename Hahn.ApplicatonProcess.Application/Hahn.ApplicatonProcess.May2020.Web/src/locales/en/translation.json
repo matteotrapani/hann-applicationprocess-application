@@ -3,8 +3,30 @@
         "list": {
             "title": "Applicants"
         },
+        "add": {
+            "title": "Add applicant"
+        },
         "name": "Name",
         "familyName": "Family name",
+        "address": "Address",
+        "countryOfOrigin": "Country of origin",
+        "emailAddress": "Email",
+        "age": "Age",
         "hired": "Hired"
+    },
+    "errorMessages": {
+        "required": "'${$displayName}' is mandatory",
+        "minLength": "'${$displayName}' must be at least ${$config.length} characters long",
+        "min": "'${$displayName}' must be minimum ${$config.constraint}",
+        "max": "'${$displayName}' must be maximum ${$config.constraint}",
+        "email": "'${$displayName}' is not a valid email"
+    },
+    "general": {
+        "save": "Save",
+        "reset": "Reset",
+        "switchLanguage": {
+            "button": "Switch language",
+            "info": "Refresh the page to see the language change"
+        }
     }
 }

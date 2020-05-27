@@ -1,0 +1,50 @@
+<template>
+    <require from="./blur-image"></require>
+
+    <section class="au-animate">
+        <div class="row">
+            <div class="col-12">
+                <h2>${ heading | t}</h2>
+            </div>
+        </div>
+        <div class="au-stagger">
+            <form role="form" submit.delegate="submit()">
+                <div class="form-row">
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="name">${ 'applicants.name' | t }</label>
+                        <input type="text" value.bind="name & validate" class="form-control" id="name" placeholder="${ 'applicants.name' | t }">
+                    </div>
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="familyName">${ 'applicants.familyName' | t }</label>
+                        <input type="text" value.bind="familyName & validate" class="form-control" id="familyName" placeholder="${ 'applicants.familyName' | t }">
+                    </div>
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="address">${ 'applicants.address' | t }</label>
+                        <input type="text" value.bind="address & validate" class="form-control" id="address" placeholder="${ 'applicants.address' | t }">
+                    </div>
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="countryOfOrigin">${ 'applicants.countryOfOrigin' | t }</label>
+                        <input type="text" value.bind="countryOfOrigin & validate" class="form-control" id="countryOfOrigin" placeholder="${ 'applicants.countryOfOrigin' | t }">
+                    </div>
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="emailAddress">${ 'applicants.emailAddress' | t }</label>
+                        <input type="text" value.bind="emailAddress & validate" class="form-control" id="emailAddress" placeholder="${ 'applicants.emailAddress' | t }">
+                    </div>
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="age">${ 'applicants.age' | t }</label>
+                        <input type="number" value.bind="age & validate" class="form-control" id="age" placeholder="${ 'applicants.age' | t }">
+                    </div>
+                    <div class="col-12 col-md-6 form-group">
+                        <div class="form-check">
+                        <label for="hired" class="form-check-label">
+                            <input type="checkbox" class="form-check-input" checked.bind="hired" id="hired">
+                            ${ 'applicants.hired' | t }
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">${ 'general.save' | t }</button>
+            </form>
+        </div>
+    </section>
+</template>

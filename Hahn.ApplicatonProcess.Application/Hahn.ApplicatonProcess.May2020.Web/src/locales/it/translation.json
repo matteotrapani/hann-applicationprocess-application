@@ -3,8 +3,30 @@
         "list": {
             "title": "Candidati"
         },
+        "add": {
+            "title": "Aggiungi candidato"
+        },
         "name": "Nome",
         "familyName": "Cognome",
+        "address": "Indirizzo",
+        "countryOfOrigin": "Nazione di provenienza",
+        "emailAddress": "Email",
+        "age": "Età",
         "hired": "Assunto"
+    },
+    "errorMessages": {
+        "required": "Il campo '${$displayName}' è obbligatorio",
+        "minLength": "Il campo '${$displayName}' deve avere almeno ${$config.length} caratteri",
+        "min": "Il campo '${$displayName}' deve essere almeno ${$config.constraint}",
+        "max": "Il campo '${$displayName}' deve essere massimo ${$config.constraint}",
+        "email": "Il campo '${$displayName}' non è una email valida"
+    },
+    "general": {
+        "save": "Salva",
+        "reset": "Reset",
+        "switchLanguage": {
+            "button": "Cambia lingua",
+            "info": "Ricarica la pagina per visualizzare il cambiamento di lingua"
+        }
     }
 }

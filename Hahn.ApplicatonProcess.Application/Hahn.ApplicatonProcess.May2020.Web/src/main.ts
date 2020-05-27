@@ -3,7 +3,8 @@ import '@fortawesome/fontawesome-free';
 import {Aurelia} from 'aurelia-framework';
 import * as environment from '../config/environment.json';
 import {PLATFORM} from 'aurelia-pal';
-import { TCustomAttribute, Backend} from 'aurelia-i18n';
+import { TCustomAttribute, Backend, I18N} from 'aurelia-i18n';
+import { ValidationMessageProvider } from 'aurelia-validation';
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
@@ -49,6 +50,21 @@ export function configure(aurelia: Aurelia) {
   if (environment.debug) {
     aurelia.use.developmentLogging();
   }
+
+  
+  ValidationMessageProvider.prototype.getMessage = function(key) {
+    const i18n = aurelia.container.get(I18N);
+    const translation = i18n.tr(`errorMessages.${key}`);
+    return this.parser.parse(translation);
+  };
+
+  ValidationMessageProvider.prototype.getDisplayName = (propertyName: string | number, displayName?: string | null | (() => string)): string => {
+    if (displayName !== null && displayName !== undefined) {
+      return displayName.toString();
+    }
+    const i18n = aurelia.container.get(I18N);
+    return i18n.tr(propertyName.toString());
+  };
 
   aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
 }

@@ -21,6 +21,12 @@ export class ChildRouter {
         nav: true,
         title: 'Applicants'
       }
+      {
+        route: 'applicants/add',
+        name: 'addApplicant',
+        moduleId: PLATFORM.moduleName('./applicants-add'),
+        nav: false,
+      }
     ]);
 
     this.router = router;

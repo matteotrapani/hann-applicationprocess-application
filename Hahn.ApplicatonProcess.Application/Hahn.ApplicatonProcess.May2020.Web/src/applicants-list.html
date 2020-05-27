@@ -2,14 +2,22 @@
     <require from="./blur-image"></require>
 
     <section class="au-animate">
-        <h2>${heading}</h2>
+        <div class="row">
+            <div class="col-8">
+                <h2>${ heading | t}</h2>
+            </div>
+            <div class="col-4">
+                <a class="btn btn-danger float-right" route-href="route: addApplicant"><i class="fas fa-plus"></i></a>
+            </div>
+        </div>
         <div class="row au-stagger">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Family Name</th>
-                        <th scope="col">Hired</th>
+                        <th scope="col" t="applicants.name"></th>
+                        <th scope="col" t="applicants.familyName"></th>
+                        <th scope="col" t="applicants.hired"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -17,6 +25,7 @@
                         <td>${applicant.name}</td>
                         <td>${applicant.familyName}</td>
                         <td><input class="form-check-input ml-0" type="checkbox" checked.bind="applicant.hired" disabled></td>
+                        <td><button type="button" class="btn btn-primary" click.trigger="select(applicant)"><i class="far fa-eye"></i></button></td>
                     </tr>
                 </tbody>
             </table>
