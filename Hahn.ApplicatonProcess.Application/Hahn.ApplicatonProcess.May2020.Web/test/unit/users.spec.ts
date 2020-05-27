@@ -1,4 +1,4 @@
-import {Users} from '../../src/users';
+import {Users} from '../../src/applicants-list';
 import {HttpClient} from 'aurelia-fetch-client';
 
 class HttpStub {

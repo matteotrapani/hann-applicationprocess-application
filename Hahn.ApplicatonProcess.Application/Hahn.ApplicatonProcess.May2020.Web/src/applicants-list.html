@@ -1,0 +1,25 @@
+<template>
+    <require from="./blur-image"></require>
+
+    <section class="au-animate">
+        <h2>${heading}</h2>
+        <div class="row au-stagger">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Family Name</th>
+                        <th scope="col">Hired</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr repeat.for="applicant of applicants">
+                        <td>${applicant.name}</td>
+                        <td>${applicant.familyName}</td>
+                        <td><input class="form-check-input ml-0" type="checkbox" checked.bind="applicant.hired" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</template>

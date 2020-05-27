@@ -5,7 +5,7 @@ export class App {
   public router: Router;
 
   public configureRouter(config: RouterConfiguration, router: Router) {
-    config.title = 'Aurelia';
+    config.title = 'Hahn.ApplicatonProcess.Application';
     config.map([
       {
         route: ['', 'welcome'],
@@ -15,18 +15,11 @@ export class App {
         title: 'Welcome'
       },
       {
-        route: 'users',
-        name: 'users',
-        moduleId: PLATFORM.moduleName('./users'),
+        route: 'applicants',
+        name: 'applicants',
+        moduleId: PLATFORM.moduleName('./applicants-list'),
         nav: true,
-        title: 'Github Users'
-      },
-      {
-        route: 'child-router',
-        name: 'child-router',
-        moduleId: PLATFORM.moduleName('./child-router'),
-        nav: true,
-        title: 'Child Router'
+        title: 'Applicants'
       }
     ]);
 
