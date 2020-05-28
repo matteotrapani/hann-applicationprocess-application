@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Hahn.ApplicatonProcess.May2020.Infrastructure.Models;
+﻿using Hahn.ApplicatonProcess.May2020.Infrastructure.Models;
 
 namespace Hahn.ApplicatonProcess.May2020.Domain.Mappings
 {

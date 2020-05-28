@@ -1,5 +1,4 @@
-﻿using FluentValidation.AspNetCore;
-using Hahn.ApplicatonProcess.May2020.Infrastructure.Filters;
+﻿using Hahn.ApplicatonProcess.May2020.Infrastructure.Filters;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Hahn.ApplicatonProcess.May2020.Web.Infrastructure

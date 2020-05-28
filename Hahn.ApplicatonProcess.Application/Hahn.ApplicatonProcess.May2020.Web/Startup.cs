@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Aurelia.DotNet;
 using Hahn.ApplicatonProcess.May2020.Data.Infrastructure;
 using Hahn.ApplicatonProcess.May2020.Domain;
@@ -9,10 +5,6 @@ using Hahn.ApplicatonProcess.May2020.Infrastructure;
 using Hahn.ApplicatonProcess.May2020.Web.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

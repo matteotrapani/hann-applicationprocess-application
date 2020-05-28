@@ -1,9 +1,4 @@
-﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using Hahn.ApplicatonProcess.May2020.Domain.Services;
 using Hahn.ApplicatonProcess.May2020.Infrastructure.Models;
 
