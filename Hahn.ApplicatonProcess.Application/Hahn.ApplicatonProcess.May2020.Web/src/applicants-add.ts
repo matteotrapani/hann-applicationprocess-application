@@ -53,14 +53,16 @@ export class ApplicantsAdd {
   }
 
   public async submit() {
-    await this.validationController.validate();
+    const validation = await this.validationController.validate();
+    if (!validation.valid)
+      return;
     var applicant = new ApplicantPostRequest();
     applicant.name = this.name;
     applicant.familyName = this.familyName;
     applicant.address = this.address;
     applicant.countryOfOrigin = this.countryOfOrigin;
     applicant.emailAddress = this.emailAddress;
-    applicant.age = this.age;
+    applicant.age = this.age | 0;
     applicant.hired = this.hired;
 
     try {
