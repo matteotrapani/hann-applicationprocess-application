@@ -1,4 +1,4 @@
-import {autoinject, computedFrom} from 'aurelia-framework';
+import {autoinject, inject, NewInstance} from 'aurelia-framework';
 import { I18N } from 'aurelia-i18n';
 import { ValidationController, ValidationRules, ValidateEvent, validateTrigger } from 'aurelia-validation';
 import { BootstrapFormRenderer } from 'utils/bootstrap-form-renderer';
@@ -26,7 +26,7 @@ export class ApplicantEdit {
   constructor(
     private applicantsApi: ApplicantsApi, 
     private i18n: I18N, 
-    private validationController: ValidationController, 
+    @inject(NewInstance.of(ValidationController)) private validationController: ValidationController, 
     private dialogService: DialogService,
     private router: Router
   ) {
