@@ -8,17 +8,15 @@ Run `cd .\Hahn.ApplicatonProcess.Application\`
 
 Run `dotnet restore`
 
-## Run dev app
-
 Run `dotnet build`
 
 Run `cd .\Hahn.ApplicatonProcess.May2020.Web\`
 
+## Run dev app
+
 Run `dotnet run`, then open `http://localhost:5000`
 
 ## Run production app
-
-Run `cd .\Hahn.ApplicatonProcess.May2020.Web\`
 
 Run `dotnet publish`
 
